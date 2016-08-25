@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "US Unemployment Rates from 1993-2016"
+author: Jon Starnes
 date:   2016-08-23 00:10:45
 categories: blog blscrapeR Bureau-of-Labor-Statistics presidents underemployment unemployment
 ---

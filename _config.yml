@@ -1,6 +1,7 @@
 ### GENERAL SETTINGS ###
 # Site Settings
 title: Jon Starnes
+name: Jon Starnes
 about: This site is a personal site for data science projects that uses open access data.
 email: jstarne4@gmail.com
 description: >
@@ -11,7 +12,7 @@ timezone: America/New_York
 
 read: Read More
 
-author:     
+author:
   name:     Jon Starnes
   link:     https://jon-starnes.github.io
   photo:
