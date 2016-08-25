@@ -6,7 +6,7 @@ email: jstarne4@gmail.com
 description: >
   Grokking it with Open Data
 baseurl: ""
-url: "http://localhost:4000"
+url: "https://jon-starnes.github.io"
 timezone: America/New_York
 
 read: Read More
