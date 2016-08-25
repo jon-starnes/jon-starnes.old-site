@@ -6,7 +6,7 @@
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -104,7 +104,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Muli', sans-serif;
   font-size: 1em;
 }
 button,
@@ -273,11 +273,12 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #f3f3f3;
 }
 input,
 button,
@@ -697,7 +698,7 @@ code {
   font-size: 90%;
   color: #c7254e;
   white-space: nowrap;
-  background-color: #f9f2f4;
+  background-color: #e1bec8; /* #f9f2f4; */
   border-radius: 4px;
 }
 kbd {
@@ -3957,7 +3958,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #000;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4021,7 +4022,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #333;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #000;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {

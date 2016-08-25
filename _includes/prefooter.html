@@ -1,0 +1,33 @@
+<div class="container mtb">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Latest Posts</h4>
+            <div class="hline"></div>
+            {% for post in site.categories['blog'] limit:1 %}
+              <p>
+                <h4>{{ post.title}}</h4>
+              </p>
+              {{ post.content | truncatewords:32}}
+              <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}.</a></p>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4">
+            <h4>What else can I find here?</h4>
+            <div class="hline"></div>
+            {% for post in site.categories['resources'] limit:1 %}
+              {{ post.content | truncatewords:32}}
+              <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}.</a></p>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-3">
+            <h4>FAQs</h4>
+            <div class="hline"></div>
+            {% for post in site.categories['question'] %}
+              {{ post.content | truncatewords:32}}
+                <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+            {% endfor %}
+        </div>
+    </div> <!-- /row -->
+</div> <!-- container -->

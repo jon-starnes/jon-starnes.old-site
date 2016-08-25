@@ -6,8 +6,8 @@
 	Project Name: SOLID - Bootstrap 3 Theme
 	Version: 1.0
 	URL: http://alvarez.is
-	
-################################################################# */ 
+
+################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 @import url("prettyPhoto.css") screen;
@@ -16,15 +16,15 @@
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
-	* { 
+	* {
 		margin: 0;
 		padding: 0px;
-	} 
+	}
 
-body { 
-	background: #ffffff; 
-	margin: 0; 
-	height: 100%; 
+body {
+	background: #f3f3f3;
+	margin: 0;
+	height: 100%;
 	color: {{ site.colors.secondary }};
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -35,15 +35,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-p { 
-	padding: 0; 
-	margin-bottom: 12px; 
+p {
+	padding: 0;
+	margin-bottom: 12px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 24px;
-	color: {{ site.colors.secondary }}; 
-	margin-top: 10px; 
+	color: {{ site.colors.secondary }};
+	margin-top: 10px;
 }
 
 img {
@@ -61,11 +61,11 @@ ol {
     padding-left: 26px;
 }
 
-a { 
+a {
     color:{{ site.colors.link }};
     padding: 0;
 	margin: 0;
-	text-decoration: none; 
+	text-decoration: none;
 	-webkit-transition: background-color .4s linear, color .4s linear;
 	-moz-transition: background-color .4s linear, color .4s linear;
 	-o-transition: background-color .4s linear, color .4s linear;
@@ -79,12 +79,12 @@ a:focus {
 }
 
 ::-moz-selection  {
-	color: #fff;
+	color: #f3f3f3;
 	text-shadow:none;
 	background:{{ site.colors.secondary }};
 }
 ::selection {
-	color: #fff;
+	color: #f3f3f3;
 	text-shadow:none;
 	background:{{ site.colors.secondary }};
 }
@@ -112,13 +112,13 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: white;
+	color: #cfcfcf;
 	font-weight: 700;
 	font-size: 12px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: {{ site.colors.primary }};
+	color: #00f345;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -142,7 +142,7 @@ a:focus {
 }
 
 .btn-theme {
-  color: #fff;
+  color: #f3f3f3;
   background-color: {{ site.colors.secondary }};
   border-color: {{ site.colors.secondary }};
   margin: 4px;
@@ -152,7 +152,7 @@ a:focus {
 .btn-theme:active,
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
-  color: #fff;
+  color: #f3f3f3;
   background-color: {{ site.colors.primary }};
   border-color: {{ site.colors.primary }};
 }
@@ -160,14 +160,14 @@ a:focus {
 .dmbutton:hover,
 .dmbutton:active,
 .dmbutton:focus{
-	color: #ffffff;
-	background-color: #222222;
-	border-color: #ffffff;
+	color: #f3f3f3;
+	background-color: #00222f;
+	border-color: #f3f3f3;
 }
 .dmbutton {
 	background:rgba(0, 0, 0, 0);
-	border: 1px solid #ffffff;
-	color: #ffffff;
+	border: 1px solid #f3f3f3;
+	color: #f3f3f3;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	padding-top: 1.025rem;
@@ -208,7 +208,7 @@ a:focus {
 }
 
 .hline-w {
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 2px solid #cfcfcf;
 	margin-bottom: 25px;
 }
 /*	################################################################
@@ -275,7 +275,7 @@ a:focus {
 
 .tpl6 h3
 {
-	color:#fff;
+	color:#f3f3f3;
 	margin:0;
 	padding:40px 5px 0;
 	font-size:16px;
@@ -318,7 +318,7 @@ a:focus {
 	background-position: center center;
 	min-height: 450px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -344,7 +344,7 @@ a:focus {
 
 /* clients logo */
 #cwrap {
-	background: #f7f7f7;
+	background: #f3f3f3;
 	margin-top: 0px;
 	padding-top: 80px;
 	padding-bottom: 100px;
@@ -415,7 +415,7 @@ a:focus {
   cursor: pointer;
   background-color: #ccc \9;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #666;
+  border: 1px solid #787878;
   border-radius: 10px;
 }
 
@@ -427,7 +427,7 @@ a:focus {
 
 csmall {
 	font-size: 12px;
-	color: #b3b3b3;
+	color: #818181; /* b3b3b3 */
 }
 
 .spacing {
@@ -449,7 +449,7 @@ csmall {
 	background-position: center center;
 	min-height: 400px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -462,27 +462,27 @@ csmall {
 }
 
 /* Blog Page */
-.popular-posts { 
+.popular-posts {
 	margin: 0px;
 	padding-left: 0px;
 	}
-	
+
 .popular-posts li {
-	list-style: none; 
-	margin-bottom: 20px; 
+	list-style: none;
+	margin-bottom: 20px;
 	min-height: 70px;
 }
-.popular-posts li a, 
+.popular-posts li a,
 .popular-posts li a:hover {
-	color:#2f2f2f; 
+	color:#2f2f2f;
 	text-decoration: none;
 	}
-	
+
 .popular-posts li img {
-	float: left; 
+	float: left;
 	margin-right: 20px;
 	}
-	
+
 .popular-posts li em {
 	font-family: 'Lato', sans-serif;
 	font-size: 12px;
@@ -492,7 +492,7 @@ csmall {
 .popular-posts p {
 	line-height: normal;
 	margin-bottom: auto;
-}	
+}
 
 .share i {
 	padding-right: 15px;
@@ -500,8 +500,8 @@ csmall {
 }
 
 a.anchor{
-    display: block; 
-    position: relative; 
-    top: -80px; 
+    display: block;
+    position: relative;
+    top: -80px;
     visibility: hidden;
 }
