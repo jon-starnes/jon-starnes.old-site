@@ -6,12 +6,12 @@ email: jstarne4@gmail.com
 description: >
   Grokking it with Open Data
 baseurl: ""
-url: "https://jon-starnes.github.io"
+url: "http://localhost:4000/"
 timezone: America/New_York
 
 read: Read More
 
-author:     
+author:
   name:     Jon Starnes
   link:     https://jon-starnes.github.io
   photo:
