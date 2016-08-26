@@ -223,7 +223,7 @@ plotly_POST(p2008, "US Unemployment Rates:  2001-2008")
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/11.embed"></iframe>
 
 
-## US Unemployement 2008-2016
+## US Unemployement 2009-2016
 *Marginal Employment: The Barack Obama years*  
 Obama is elected at the beginning of the great recession. The UR continues to rise until 2010 and then begins a long decrease with a couple of uptick perturbations at the end of 2011, beginning of 2013, and with the overall marginal rate at the end of 2012.
 
