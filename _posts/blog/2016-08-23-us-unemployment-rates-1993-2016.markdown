@@ -189,7 +189,7 @@ plotly_POST(p2000, "US Unemployment Rates:  1994-2000") # push to plotly account
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/9.embed"></iframe>
 
 
-## US Unemployement 2001-2016  
+## US Unemployement 2001-2008  
 __Marginal Employment:__ *The George W. Bush years*  
 
 This plot provides a quick way to show large and rapid deviations. Moreso, the small rise in the UR ending in 2002 and then the much larger rise throuought 2008 are well known. The first of these periods is associated with the dot-com bubble burst and aftermath of 9/11; the second is well known as the beginning of the great recession.
