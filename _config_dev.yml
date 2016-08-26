@@ -31,16 +31,16 @@ github:
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title
-excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+excerpt_separator: <!--mor#00f345e--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 colors:  #in hex code if not noted else
   primary: "#00aef3" #"#F70031"
   primary_rgb: "0,174,243" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
-  secondary: "#3c3c3c" # original #384452 "#33004D"
+  secondary: "#3a4144" # Now dark gray tint of primary - original #384452 "#33004D"
   link: "#0077a7" #
-  link_hover: "#f34500" # original is #01b2fe
-  footer_heading: "#bcbcbc" # white
-  footer_content: "#cfcfcf" # light gray
+  link_hover: "#00da3e" #  variant of this lime green #00f345 original is #01b2fe
+  footer_heading: "#9c9c9c" # white
+  footer_content: "#8f8f8f" # light gray
 
 
 ### CONTACT SETTINGS ###

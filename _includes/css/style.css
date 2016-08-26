@@ -31,14 +31,14 @@ body {
 	}
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Muli', sans-serif; /* 'Raleway' */
 	font-weight: 700;
 }
 
 p {
 	padding: 0;
 	margin-bottom: 12px;
-	font-family: 'Lato', sans-serif;
+	font-family:  'Open Sans', sans-serif;  /* 'Lato'  */
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
@@ -112,7 +112,7 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #cfcfcf;
+	color: #dff6ff;
 	font-weight: 700;
 	font-size: 12px;
 }
@@ -376,7 +376,7 @@ a:focus {
 }
 
 #footerwrap i:hover {
-	color: {{ site.colors.primary }}
+	color: {{ site.colors.link_hover }}
 }
 
 /*	################################################################
