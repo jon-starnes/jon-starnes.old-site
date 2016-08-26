@@ -115,7 +115,6 @@ tail(bls_2008)
 ```R
 head(bls_2016)
 tail(bls_2016)
-
 ```
 
 
@@ -187,7 +186,7 @@ plotly_POST(p2000, "US Unemployment Rates:  1994-2000") # push to plotly account
 
 
 <!-- ![png](output_12_1.png) -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/9.embed"></iframe>
+<iframe width="800" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/9.embed"></iframe>
 
 
 ## US Unemployement 2001-2016  
@@ -221,7 +220,7 @@ plotly_POST(p2008, "US Unemployment Rates:  2001-2008")
 
 
 <!-- ![png](output_14_1.png) -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/11.embed"></iframe>
+<iframe width="800" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/11.embed"></iframe>
 
 
 ## US Unemployement 2008-2016
@@ -253,7 +252,7 @@ plotly_POST(p2016, "US Unemployment Rates:  2009-2016")
 
 
 <!-- ![png](output_16_1.png) -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/13.embed"></iframe>
+<iframe width="800" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/13.embed"></iframe>
 
 
 ## Conclusion
