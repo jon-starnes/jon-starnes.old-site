@@ -18,6 +18,6 @@ As more content is added and involvement grows, one hopes that it can serve as a
 
 __References:__  
 
-1. [https://en.wikipedia.org/wiki/Open_data](**Open data** From Wikipedia, the free encyclopedia)  
+1. [**Open data** From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Open_data)  
 
-2. [http://opendefinition.org/od/2.1/en/](Open Definition 2.0)  
+2. [Open Definition 2.0](http://opendefinition.org/od/2.1/en/)  
