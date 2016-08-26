@@ -7,17 +7,19 @@ permalink: /blog/
 <div class="container mtb">
     <div class="row">
         <div class="col-md-8">
-          <h3>Recent articles</h3>
-
+          <br>
+          <h4>Recent articles</h4>
+          <div class="hline"></div>
+          <div class="spacing"></div>
           {% for post in site.categories['blog'] %}
-          		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-          		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          		<h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+              <time>{{ post.date | date: "%b %-d, %Y" }}</time>
               {{ post.content | truncatewords:100}}
               <p><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>
           {% endfor %}
         </div> <!--/col-lg-8 -->
 
-        {% include sidebar.html %}
+        {% include sidebar2.html %}
 
     </div> <!--/row -->
 </div> <!--/container -->
