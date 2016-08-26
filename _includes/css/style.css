@@ -22,7 +22,7 @@
 	}
 
 body {
-	background: #f3f3f3;
+	background: #f3fcff;
 	margin: 0;
 	height: 100%;
 	color: {{ site.colors.secondary }};
@@ -204,11 +204,11 @@ a:focus {
 }
 
 .hline {
-	border-bottom: 2px solid {{ site.colors.secondary }};
+	border-bottom: 2px solid #b3b3b3;
 }
 
 .hline-w {
-	border-bottom: 2px solid #cfcfcf;
+	border-bottom: 2px solid #a9a9a9;
 	margin-bottom: 25px;
 }
 /*	################################################################

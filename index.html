@@ -3,19 +3,22 @@ layout: index
 title: Home
 permalink: /
 ---
-
+<div class="spacing"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="spacing"></div>
-      {% for post in site.categories['feature'] limit:2 %}
-      {{ post.content }}
+      <h4>Hello Open Data</h4>
+      <div class="hline"></div>
 
+      {% for post in site.categories['feature'] limit:2 %}
+        {{ post.content }}
       {% endfor %}
 
       <div class="spacing"></div>
     </div>
-    {% include sidebar.html %}
+
+    {% include sidebar3.html %}
+
   </div>
 
   {% include prefooter.html %}
