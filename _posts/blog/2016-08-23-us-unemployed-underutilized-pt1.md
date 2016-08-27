@@ -135,7 +135,7 @@ ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
 </div>
 
 
-## US Unemployement 2001-2016  
+## US Unemployement 2001-2008  
 *__Marginal Employment: The George W. Bush years__*  
 
 This plot provides a quick way to show large and rapid deviations. Moreso, the small rise in the UR ending in 2002 and then the much larger rise throuought 2008 are well known. The first of these periods is associated with the dot-com bubble burst and aftermath of 9/11; the second is well known as the beginning of the great recession.  
