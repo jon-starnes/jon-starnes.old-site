@@ -65,7 +65,7 @@ plotFull
 
 
 ### Converting Date Variables for Analysis   
-The R as.numeric() function can convert (proper) date formats into their internal number state. We can convert the date field and store the new numeric version in a new variable. Since time really is "continuous" there really is no problem with converting the data to it's internal computer numeric representation. Working with this date data this way will make analysis life easier.  
+The R as.numeric() function can convert (proper) date formats into their internal number state. We can convert the date field and store the new numeric version in a new variable. Since time really is "continuous" there really is no problem with converting the data to it's internal representation. Working with it this way makes the analysis life easier later on.  
 
 *Use appropriately and don't use the dates this way when the date belongs to a discrete category like financial quarters, seasons, etc.*  
 
@@ -85,7 +85,11 @@ head(bls_94_2000, 5)
     5 1994    M08     August   6.0           LNS14000000 1994-08-31     9008
 
 
-In the last blog feature we looked at BLS data, and in the examples you may have noticed that the data is in no specific order. This ultimately doesn't matter unless you really want a visual or you plan to port data to a spreadsheet system like Excel. If needed we can reorder the data by date or by value (the UE and UU rate as percentage). The first command below subsets the date field, then orders it. The second gives us a glimpse of the date for a visual check that it worked. This also gives us a nice way to see if the internal date number matches the original 'date' variable.
+---  
+
+In the last blog feature we looked at BLS data. You may have noticed that the data was in no specific order in those examples. This ultimately doesn't matter. However, ordering the data may be useful if you plan to port data to a spreadsheet system like Excel. We can always reorder the data in R if needed.  
+
+The first command below subsets the date field, then orders it. The second gives us a glimpse of the date for a visual check that it worked. This also gives us a nice way to see if the internal date number matches the original 'date' variable.
 
 
 ```R
