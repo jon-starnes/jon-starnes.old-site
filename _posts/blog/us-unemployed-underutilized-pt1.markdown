@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "US Unemployment Rates from 1993-2016"
+title:  "US Unemployment and Underutilized Labor Part 2"
 author: Jon Starnes
 date:   2016-08-23 00:10:45
-categories: blog blscrapeR Bureau-of-Labor-Statistics presidents underemployment unemployment
+categories: [blog, R, open data]
+tags: [blscrapeR, base graphics, Bureau of Labor Statistics, data munging in R, unemployment rates, underutilized labor, web scraping]
 ---
 
 The Burea of Labor Statistics (BLS) has made good on the Open Data Initiative aims of providing open access to government datasets. Fortunately there is an R language api for the BLS data called "blsscrape", which I found first on Jason Rickert's article on [R Packages for Data Access

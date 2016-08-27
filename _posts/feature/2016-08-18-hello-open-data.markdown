@@ -2,7 +2,8 @@
 layout: post
 title:  "Hello Open Data"
 date:   2016-08-23 00:10:45
-categories: feature open-data GPL
+tags: GPL
+categories: [feature, Open Data]
 ---
 
 What is open data? What does that mean? The concept has been around since before the days of GPL and open source requirements, but the formal definition is relatively new. Open data is data that can be accessed and used for any reason by anyone, subject only to the social contract authority of attribution to the originator or author and the share and share alike contract.
@@ -18,6 +19,6 @@ As more content is added and involvement grows, one hopes that it can serve as a
 
 __References:__  
 
-1. [**Open data** From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Open_data)  
+1. [Open data From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Open_data)  
 
 2. [Open Definition 2.0](http://opendefinition.org/od/2.1/en/)  

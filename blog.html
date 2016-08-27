@@ -16,6 +16,7 @@ permalink: /blog/
               <time>{{ post.date | date: "%b %-d, %Y" }}</time>
               {{ post.content | truncatewords:100}}
               <p><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>
+              <div class="spacing"></div>
           {% endfor %}
         </div> <!--/col-lg-8 -->
 
