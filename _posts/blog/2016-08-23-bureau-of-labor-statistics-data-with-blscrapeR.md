@@ -174,11 +174,9 @@ Load Plotly and then add your account username and key (found on Plotly site in 
 
 {% highlight r %}
 library(plotly)
-py <- plot_ly(username="jstarnes", key="n9cws6snyz")  # open plotly connection
-py
-
-Sys.setenv("plotly_username"="jstarnes")
-Sys.setenv("plotly_api_key"="n9cws6snyz")
+Sys.setenv("plotly_username"="your_plotly_username")
+Sys.setenv("plotly_api_key"="your_api_key")
+py <- plot_ly(username="your_username", key="your_key")  # open plotly connection
 {% endhighlight %}  
 
 
@@ -208,12 +206,8 @@ ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
   xlab("Year") +
   ylab("Percent")
 
-  # store username and api key
-  Sys.setenv("plotly_username"="your_plotly_username")
-  Sys.setenv("plotly_api_key"="your_api_key")
-  py <- plot_ly(username="your_username", key="your_key")  # open plotly connection
-
   ggplotly(p2000) # run ggplot2 chart through plotly
+
   plotly_POST(p2000, "US Unemployment Rates:  1994-2000") # push to plotly account
 {% endhighlight %}
 
