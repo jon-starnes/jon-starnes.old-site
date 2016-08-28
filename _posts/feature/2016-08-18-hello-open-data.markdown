@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello Open Data"
 date:   2016-08-23 00:10:45
-tags: GPL
+tags: [GPL, Open Definition 2.0]
 categories: [feature, Open Data]
 ---
 
@@ -12,10 +12,9 @@ What is open data? What does that mean? The concept has been around since before
 
 > "Knowledge is open if anyone is free to access, use, modify, and share it — subject, at most, to measures that preserve provenance and openness."  
 
-This site is a personal site for data science projects that uses open access data. Grokking with Open Data (GIOD), a name and statement if you will, acknowledges open data initiatives in the US and across the world as sources of inspiration and data materials. GIOD seeks to lead by example which is why all data and sources featured here will be made readily available.  
+This site is a personal site for data science projects that uses open access data. Grokking It with Open Data (GIOD), a name and statement if you will, acknowledges open data initiatives in the US and across the world as sources of inspiration and data materials. GIOD seeks to lead by example which is why all data and sources featured here will be made readily available.  
 
-As more content is added and involvement grows, one hopes that it can serve as a conduit for others to engage with and actively use open data resources.  
-
+The mission of this site is to advocate for open data aims and act as a conduit for increasing awareness and engagement with open data.
 
 __References:__  
 
