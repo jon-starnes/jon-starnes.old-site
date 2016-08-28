@@ -198,4 +198,4 @@ ggplot(data=bls_2016, aes(x = date, y = value, color=seriesID)) +
 ## Conclusion
 The aims of this first post were simply to introduce a source of open data (BLS) and a tool for extracting that data (blscrapeR). Introducing sources of open access data and tools for using are the overall aims for this site. Grokking all of that occurs afterwards.
 
-My followup plans include more quantitative analysis and looking ahead at how marginal employment is distrbuted spatially in the US using GIS mapping first in R and then Python.
+Followup posts using the BLS data will include descriptive and inferential statistics.
