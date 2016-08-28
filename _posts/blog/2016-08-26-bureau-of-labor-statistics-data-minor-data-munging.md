@@ -26,14 +26,14 @@ Unfortunately, access to the BLS data is not uniform for all series and categori
 
 First, install the blscrapeR package.  
 
-```R
+{% highlight r %}
 suppressMessages(install.packages('blscrapeR'))
-```
+{% endhighlight %}
 
 Next, call data from the BLS and store the data to datasets in the R workspace. I decided to start with three seperate datasets, one each for the last three US presidents in office, Clinton, GW Bush, and Obama.  
 
 
-```R
+{% highlight r %}
 library(blscrapeR)
 
 bls_2000 <- bls_api(c("LNS13327709", "LNS14000000"),
@@ -44,16 +44,16 @@ bls_2008 <- bls_api(c("LNS13327709", "LNS14000000"),
 
 bls_2016 <- bls_api(c("LNS13327709", "LNS14000000"),
                     startyear = 2009, endyear = 2016)
-```
+{% endhighlight %}
 
 ---  
 
 It's always a good idea to do a spot check or 'sanity check' of the data before moving ahead. The *head()* and *tail()* functions in R are useful for checking the beginning or the end of datasets.  
 
 
-```R
+{% highlight r %}
 head(bls_2000, 5)
-```
+{% endhighlight %}
 
 
       year period periodName value footnotes    seriesID       date
@@ -64,9 +64,9 @@ head(bls_2000, 5)
     5 2000    M08     August   4.1           LNS14000000 2000-08-31
 
 
-```R
+{% highlight r %}
 tail(bls_2008, 5)
-```
+{% endhighlight %}
 
 
         year period periodName value footnotes    seriesID       date
@@ -77,9 +77,9 @@ tail(bls_2008, 5)
     192 2006    M01    January   8.4           LNS13327709 2006-01-31
 
 
-```R
+{% highlight r %}
 head(bls_2016,5)
-```
+{% endhighlight %}
 
 
       year period periodName value footnotes    seriesID       date
@@ -102,7 +102,7 @@ Unemployment rates include years 1993-2016. The full marginally employed rate st
 ---
 
 
-```R
+{% highlight r %}
 library(ggplot2)
 
 ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
@@ -126,7 +126,7 @@ ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
 
   ggplotly(p2000) # run ggplot2 chart through plotly
   plotly_POST(p2000, "US Unemployment Rates:  1994-2000") # push to plotly account
-```
+{% endhighlight %}
 
 
 <!--![png](output_13_1.png) -->
@@ -143,7 +143,7 @@ This plot provides a quick way to show large and rapid deviations. Moreso, the s
 ---
 
 
-```R
+{% highlight r %}
 ggplot(data=bls_2008, aes(x = date, y = value, color=seriesID)) +
   coord_cartesian(ylim=c(3, 16)) +
   labs(title = "US Unemployment Rates:  2001-2008") +
@@ -157,7 +157,7 @@ ggplot(data=bls_2008, aes(x = date, y = value, color=seriesID)) +
   scale_x_date(date_breaks = ("1 year"), date_labels = "%Y") +
   xlab("Year") +
   ylab("Percent")
-```
+{% endhighlight %}
 
 
 <!-- ![png](output_15_1.png) -->
@@ -172,7 +172,7 @@ Obama is elected at the beginning of the great recession. The UR continues to ri
 ---
 
 
-```R
+{% highlight r %}
 ggplot(data=bls_2016, aes(x = date, y = value, color=seriesID)) +
   coord_cartesian(ylim=c(4, 18)) +
   labs(title = "US Unemployment Rates:  2008-2016") +
@@ -186,7 +186,7 @@ ggplot(data=bls_2016, aes(x = date, y = value, color=seriesID)) +
   scale_x_date(date_breaks = ("1 year"), date_labels = "%Y") +
   xlab("Year") +
   ylab("Percent")
-```
+{% endhighlight %}
 
 
 <!--![png](output_17_1.png) -->
