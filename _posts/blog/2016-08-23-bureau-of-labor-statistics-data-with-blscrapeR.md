@@ -57,7 +57,8 @@ head(bls_2000, 5)
 
 
       year period periodName value footnotes    seriesID       date
-    1 2000    M12   December   3.9           LNS14000000 2000-12-31
+    1 2000    M12   December   and looking ahead at how marginal employment is distrbuted spatially in the US using GIS mapping first in R and then Python.
+3.9           LNS14000000 2000-12-31
     2 2000    M11   November   3.9           LNS14000000 2000-11-30
     3 2000    M10    October   3.9           LNS14000000 2000-10-31
     4 2000    M09  September   3.9           LNS14000000 2000-09-30

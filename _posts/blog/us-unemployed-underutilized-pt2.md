@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Bureau of Labor Statistics Data with Minor Data Munging"
+title:  "Bureau of Labor Statistics Data with blscrapeR: Minor Data Munging"
 author: Jon Starnes
-date:   2016-08-26 00:10:45
-tags:   [blscrapeR, base R plot, qplot, unemployment rates, underutilized labor, web scraping]
+date:   2016-08-23 00:10:45
+tags:   [blscrapeR, base graphics, Bureau of Labor Statistics, data munging in R, unemployment rates, underutilized labor, web scraping]
 categories: [blog, Bureau of Labor Statistics, data munging, Open Data]
 ---
 
