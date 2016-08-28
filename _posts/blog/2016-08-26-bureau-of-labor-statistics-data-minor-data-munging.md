@@ -3,8 +3,8 @@ layout: post
 title:  "Bureau of Labor Statistics Data with blscrapeR: US Unemployment"
 author: Jon Starnes
 date:   2016-08-23 00:10:45
-tags:   [blscrapeR, Bureau of Labor Statistics, ggplot2, marginal workers, plot_ly, time series, unemployment rates, underutilized labor, web scraping]
-categories: [blog, R, Open Data]
+tags:   [blscrapeR, base R plot, qplot, unemployment rates, underutilized labor, web scraping]
+categories: [blog, Bureau of Labor Statistics, data munging, Open Data]
 ---
 
 
