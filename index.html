@@ -1,17 +1,19 @@
 ---
 layout: index
-title: Grokking it with Open Data
+title: Hello Open Data
 permalink: /
 ---
 <div class="spacing"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h4>Hello Open Data</h4>
+      <h4>News and Features</h4>
       <div class="hline"></div>
 
+      <p style=font-family: Muli; color: #cfcfcf;><em>And so it begins.</em></p>
+
       {% for post in site.categories['feature'] limit:1 %}
-        <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+        <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
         {{ post.content }}
       {% endfor %}
 

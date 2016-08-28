@@ -14,6 +14,9 @@ What is open data? What does that mean? The concept has been around since before
 
 This site seeks to acknowledge open data ideals in all ways foreseeable. Beyond acknowledging open data sources, this site also actively praises the recent open data initiatives in the US as well as others elsewhere in the world that we hope to discover soon. We also aim to lead by example. That is why all data and sources featured here will be made readily available either on the site or by special request.
 
+---
+---
+
 
 __References:__  
 
