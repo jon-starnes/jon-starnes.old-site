@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "US Unemployment and Underutilized Labor Part 1: 1993-2016"
+title:  "Bureau of Labor Statistics Data with blscrapeR: US Unemployment"
 author: Jon Starnes
 date:   2016-08-23 00:10:45
 tags:   [blscrapeR, Bureau of Labor Statistics, ggplot2, marginal workers, plot_ly, time series, unemployment rates, underutilized labor, web scraping]
