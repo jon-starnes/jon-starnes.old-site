@@ -206,9 +206,9 @@ ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
   xlab("Year") +
   ylab("Percent")
 
-  ggplotly(p2000) # run ggplot2 chart through plotly
+  ggplotly(p2000)
 
-  plotly_POST(p2000, "US Unemployment Rates:  1994-2000") # push to plotly account
+  plotly_POST(p2000, "US Unemployment Rates:  1994-2000")
 {% endhighlight %}
 
 
