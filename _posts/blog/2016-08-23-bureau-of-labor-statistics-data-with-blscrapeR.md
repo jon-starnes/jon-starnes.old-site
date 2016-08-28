@@ -3,6 +3,7 @@ layout: post
 title:  "Bureau of Labor Statistics Data with blscrapeR: US Unemployment"
 author: Jon Starnes
 date:   2016-08-23 00:10:45
+comments: true
 tags:   [Barack Obama, Bill Clinton, blscrapeR, ggplot2, George W. Bush, plot_ly, R time series, unemployment rates, underutilized labor, US presidents, web scraping]
 categories: [blog, blscrapeR, Bureau of Labor Statistics, Open Data]
 ---
