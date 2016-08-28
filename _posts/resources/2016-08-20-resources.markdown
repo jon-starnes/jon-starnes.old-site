@@ -19,6 +19,11 @@ This list is starting small because I am only including sites where data is imme
 2. The Bureau of Labor Statistics  
   [http://www.bls.gov/data/](http://www.bls.gov/data/)  
 
+3. Kaggle Datasets  
+  [https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)
+
+4. The Dathub  
+  [https://datahub.io/dataset](https://datahub.io/dataset)
 
 ---  
 If you have any open data sites to suggest please email me or contact me (See the contacts and social media at the bottom of the page).
