@@ -55,7 +55,7 @@ qplot(date.num, value, data=bls_94_2000, colour = seriesID, ylab = "Percent", xl
 
 
 ### Conclusion
-Just rinse and repeat to do the data munging, date conversion and new variable creation with the other datasets. There are a few more nuggets we may be able to mind from this data. Followup posts that use the BLS data will include Descriptive and inferential statistical analysis.  
+Just rinse and repeat to do the data munging, date conversion and new variable creation with the other datasets. There are a few more nuggets we may be able to mine from this data. Followup posts that use the BLS data will include descriptive and inferential statistical analysis.  
 
 
 ---  
