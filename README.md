@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-## New ReadMe
+## ReadMe
 
-My site uses the Solid Bootstrap theme for Jekyll. But my version here is so altered and reengineered (save the bootstrap css settings and file) that it made no sense to keep the original ReadMe.
-=======
-My site uses the Solid Bootstrap theme for Jekyll. But my version here is so altered and reengineered (save the bootstrap css settings and file) that it made no sense to keep the original ReadMe. 
->>>>>>> 4fe0e9d23b5b31d20d886eeeaeefcc9992ab1616
+My site uses the Solid Bootstrap theme for Jekyll. But my version here is so altered and rebuilt that it made no sense to keep the original ReadMe. I ended up saving the directory structure, pathto header and support images, and the bootstrap css settings and file.
