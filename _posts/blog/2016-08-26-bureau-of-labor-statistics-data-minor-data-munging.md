@@ -21,18 +21,16 @@ __*US Unemployed and Underutilized Rates: 1994-2016*__
 Below is another time series plot showing the big picture changes in the unemployed and underutilized rates for the last 22-23 years. We can see the peaks and valleys clearly with all the years together in one chart, but we still have more exploring to do.  
 
 
-![png](/assets/img/blog/post03_1.png)
+![US BLS Rates: 1994-2016](/assets/img/blog/post02_plot1.png)
 
 
 ---  
 
 
-Since the folowup posts on BLS data will move into descriptive analysis, I decided to convert the date format to its internal numeric representation. We need a way to compare date data with the rate (percentage) data on unemployment and underutilization, and converting the data and adding a new variable for it makes life easier.
-
-The plot below shows the linear slope for the dates (date format) and the new date.num variable (numeric). It shows they match. The data conversion is good.
+I converted the date format to its internal numeric form so that I can use it in quantitative analysis in the near future. The plot below shows the linear slope for the dates (date format) and the new date.num variable (numeric). It shows they match. The data conversion is good.
 
 
-![png](/assets/img/blog/post03_2.png)
+![png](/assets/img/blog/post02_plot2.png)
 
 
 ---
@@ -41,40 +39,38 @@ The plot below shows the linear slope for the dates (date format) and the new da
 Converting the data also allows for more plot visualization options. The plot below looks a lot like the time series plot for the Clinton years (1993-2000).
 
 
-{% highlight r %}
-qplot(date.num, value, data=bls_94_2000, colour = seriesID, ylab = "Percent", xlab = "Numeric Date")
-{% endhighlight %}
-
-
 ---
 
 
-![png](/assets/img/blog/post03_3.png)
+![png](/assets/img/blog/post02_plot3.png)
 
 
 ---
 
 
 ### Conclusion
-Just rinse and repeat to do the data munging, date conversion and new variable creation with the other datasets. There are a few more nuggets we may be able to mine from this data. Followup posts that use the BLS data will include descriptive and inferential statistical analysis.  
+Followup posts that use the BLS data will include descriptive and inferential statistical analysis.  
+
 
 
 ---  
----
 
 
-### Supplemental Materials
 
-I decided to call the data in three sets, one for each US president's term. I noticed some limitations calling too much data at once using the BLS API, but keeping the query size small works well. We can always bind or merge in R.
+
+### Supplemental Materials  
+
+*Below is the code I used for the post. I omitted intermediary steps that may be self-evident. If you are new to R and don't understand how I got something to work, please comment below.*  
+
 
 
 #### Step 1
-Load the blscrapeR library and call in data.  
+Load the blscrapeR library and call in data. Next, I merged the datasets into a new
+one called "bls_full" for years 1994-2016.  
 
 
 {% highlight r %}
 library(blscrapeR)
-
 bls_94_2000 <- bls_api(c("LNS13327709", "LNS14000000"),
                        startyear = 1994, endyear = 2000)
 bls_2008 <- bls_api(c("LNS13327709", "LNS14000000"),
@@ -89,122 +85,72 @@ bls_full <- rbind(bls_94_2000, bls_2008, bls_2016)
 ---
 
 
-#### Step 2
+#### Plot 1
 Plot a time series plot for all the years in the combined dataframe we made above (bls_full).
 
 
 {% highlight r %}
 library(ggplot2)
-
-plotFull <-
+gUE_full <-
 ggplot(data=bls_full, aes(x = date, y = value, color=seriesID)) +
   coord_cartesian(ylim=c(3, 18)) +
-  labs(title = "US BLS Rates: 1994-2016") +
-  geom_line(size=1, alpha=0.75) +
-  # geom_point(size=0.5, alpha=0.80) +
-  theme(legend.position="top", legend.title=element_blank(),
-        axis.title.y = element_text(margin = margin(l = 0, r = 10)),
-        axis.title.x = element_text(margin = margin(t = 10))) +
-  scale_color_manual(values=c("#ffae00", "#ff2e00"),
-                     labels=c("U-6 - Underutilized Rates",
-                              "U-3 - Unemployment Rates")) +
-  #scale_x_continuous(breaks = pretty(bls_full$x, n = 44)) +
+  geom_line(size=1, alpha=0.9) +
+  scale_color_viridis(discrete=TRUE,
+                      labels=c("U-3 - Unemployment Rate",
+                               "U-6 - Under Employed")) +
   scale_x_date(date_breaks = ("2 year"), date_labels = "%Y") +
   xlab("Year") +
   ylab("Percent")
-
-plotFull
 {% endhighlight %}
 
 
 ---
 
 
-#### Step 3
-Convert Date Variables for Analysis.
-
-The R as.numeric() function can convert (proper) date formats into their internal number state. We can convert the date field and store the new numeric version in a new variable. Since time really is "continuous" there really is no problem with converting the data to it's internal representation. Working with it this way makes the analysis life easier later on.  
+#### Convert Date Variables for Analysis.
 
 *Use appropriately and don't use the dates this way when the date belongs to a discrete category like financial quarters, seasons, etc.*  
 
-First convert the date formats and write to a new variable.  
+Convert the date formats and write the new numeric value to a new variable.  
 
 
 {% highlight r %}
-bls_94_2000$date.num = as.numeric(bls_94_2000$date)
-head(bls_94_2000, 5)
+bls_full$date.num = as.numeric(bls_full$date)
+{% endhighlight %}
+
+---  
+
+
+*Visually check the data*  
+
+#### Plot 2
+Check the linear relationship between the date and date.num data.
+
+{% highlight r %}
+data = bls_94_2000
+plot(date ~ date.num, data=bls_94_2000, ylab = "Date", xlab = "Numeric Date")
 {% endhighlight %}
 
 
-      year period periodName value footnotes    seriesID       date date.num
-    1 1994    M12   December   5.5           LNS14000000 1994-12-31     9130
-    2 1994    M11   November   5.6           LNS14000000 1994-11-30     9099
-    3 1994    M10    October   5.8           LNS14000000 1994-10-31     9069
-    4 1994    M09  September   5.9           LNS14000000 1994-09-30     9038
-    5 1994    M08     August   6.0           LNS14000000 1994-08-31     9008
+Use a new plot to check that the previous time series plots match up with the date.num representation.  
 
 
 ---  
 
 
-In the last blog feature we looked at BLS data. You may have noticed that the data was in no specific order in those examples. This ultimately doesn't matter. However, ordering the data may be useful if you plan to port data to a spreadsheet system like Excel. We can always reorder the data in R if needed.  
-
-The first command below subsets the date field, then orders it. The second gives us a glimpse of the date for a visual check that it worked. This also gives us a nice way to see if the internal date number matches the original 'date' variable.
-
-
-#### Step 4
-Reorder the data if you wish. Here's one way to do it.
-
+#### Plot 3 - Checking Numeric Date and UE/UU Rates
 {% highlight r %}
-bls_94_2000 <- bls_94_2000[order(bls_94_2000$date),]
-head(bls_94_2000, 15)
+ggplot(data=bls_full, aes(x = date.num, y = value, color=(seriesID))) +
+  coord_cartesian(ylim=c(4, 20)) +
+  geom_line(size=1.5, alpha=0.30) +
+  geom_point(size=0.3, alpha=0.90) +
+  scale_color_viridis(discrete=TRUE,
+                      labels=c("U-3 - Unemployment Rate",
+                               "U-6 - Under Employed")) +
+  xlab("Numeric Date") +
+  ylab("Percent")
 {% endhighlight %}
 
-       year period periodName value footnotes    seriesID       date date.num
-    12 1994    M01    January   6.6           LNS14000000 1994-01-31     8796
-    96 1994    M01    January  11.8           LNS13327709 1994-01-31     8796
-    11 1994    M02   February   6.6           LNS14000000 1994-02-28     8824
-    95 1994    M02   February  11.4           LNS13327709 1994-02-28     8824
-    10 1994    M03      March   6.5           LNS14000000 1994-03-31     8855
-    94 1994    M03      March  11.4           LNS13327709 1994-03-31     8855
-    9  1994    M04      April   6.4           LNS14000000 1994-04-30     8885
-    93 1994    M04      April  11.2           LNS13327709 1994-04-30     8885
-    8  1994    M05        May   6.1           LNS14000000 1994-05-31     8916
-    92 1994    M05        May  10.8           LNS13327709 1994-05-31     8916
-    7  1994    M06       June   6.1           LNS14000000 1994-06-30     8946
-    91 1994    M06       June  10.9           LNS13327709 1994-06-30     8946
-    6  1994    M07       July   6.1           LNS14000000 1994-07-31     8977
-    90 1994    M07       July  10.7           LNS13327709 1994-07-31     8977
-    5  1994    M08     August   6.0           LNS14000000 1994-08-31     9008
-
-
-
-
----
-
-
-#### Step 5
-*Visually check the data*  
-
-Use a basic R base plot to check that the date and date.num variables match.  
-
-
-{% highlight r %}
-data = bls_94_2000
-plot(date ~ date.num, data=bls_94_2000, ylab = "Date", xlab = "Numeric Date")
-{% endhighlight %}  
-
-
----
-
-
-Ordering the data worked. There is another way to check the whole dataset at once. Simply tap out a quick base R plot using the two date variables. I added x and y axis labels so that the plot is easy to display here.  
-
-
-{% highlight r %}
-data = bls_94_2000
-plot(date ~ date.num, data=bls_94_2000, ylab = "Date", xlab = "Numeric Date")
-{% endhighlight %}  
 
 
 ---

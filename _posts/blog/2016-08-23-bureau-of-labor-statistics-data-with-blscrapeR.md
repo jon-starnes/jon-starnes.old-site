@@ -22,7 +22,7 @@ Unfortunately, access to the BLS data is not uniform for all series and categori
 ### The Bill Clinton years: 1993-2000
 *US Unemployement and Underutilization*  
 
-The plot below shows a time series plot of unemployment (lower line) and the full marginally unemployed data (upper). The BLS data for "marginally attached to the workforce" is defined as "Persons not in the labor force who want and are available for work, and who have looked for a job sometime in the prior 12 months (or since the end of their last job if they held one within the past 12 months), but were not counted as unemployed because they had not searched for work in the 4 weeks preceding the survey" [http://www.bls.gov/bls/glossary.htm#M]((BLS 2016)). Workers working part time for economic reasons and other discouraged workers are a subset of the marginal workforce.  
+The plot below shows a time series plot of unemployment (lower line) and the full marginally unemployed data (upper). The BLS data for "marginally attached to the workforce" is defined as "Persons not in the labor force who want and are available for work, and who have looked for a job sometime in the prior 12 months (or since the end of their last job if they held one within the past 12 months), but were not counted as unemployed because they had not searched for work in the 4 weeks preceding the survey" [http://www.bls.gov/bls/glossary.htm]((BLS 2016)). Workers working part time for economic reasons and other discouraged workers are a subset of the marginal workforce.  
 
 ---
 
