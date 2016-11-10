@@ -29,7 +29,7 @@ The plot below shows a time series plot of unemployment (lower line) and the ful
 
 <!--![png](output_13_1.png) -->
 <div style="text-align:center" markdown="1">
-<iframe width="750" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/9.embed"></iframe>
+![Unemployment from 1994-2000](/assets/img/blog/post01_plot1.png)
 </div>
 
 ---  
@@ -46,14 +46,14 @@ This plot provides a quick way to show large and rapid deviations. Moreso, the s
 
 <!-- ![png](output_15_1.png) -->
 <div style="text-align:center" markdown="1">
-<iframe width="750" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/11.embed"></iframe>
+![Unemployment from 2001-2008](/assets/img/blog/post01_plot2.png)
 </div>
 
 
 ---  
 
 
-### The Barack Obama years: 2008-2016
+### The Barack Obama years: 2009-2016
 *US Unemployement and Underutilization*
 Obama is elected at the beginning of the great recession. The UR continues to rise until 2010 and then begins a long decrease with a couple of uptick perturbations at the end of 2011, beginning of 2013, and with the overall marginal rate at the end of 2012.  
 
@@ -63,7 +63,7 @@ Obama is elected at the beginning of the great recession. The UR continues to ri
 
 <!--![png](output_17_1.png) -->
 <div style="text-align:center" markdown="1">
-<iframe width="750" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~jstarnes/13.embed"></iframe>
+![Unemployment from 2009-2016](/assets/img/blog/post01_plot3.png)
 </div>
 
 
@@ -75,7 +75,6 @@ The aims of this first post were simply to introduce a source of open data (BLS)
 
 
 ---
----
 
 
 ### Supplemental Materials
@@ -86,24 +85,19 @@ The blscrapeR package is an API wrapper for BLS datasets. Querying and pulling d
 Visiting the Burea of Labor Statistics site may be the best first step. The BLS assigns series numbers to their datasets listed on the [bls.gov](http://www.bls.gov/news.release/empsit.t15.htm) site. After finding the series numbers you want, move back to R to install and load the blscrapeR API.  
 
 
+---
+
+
 #### Step 1
 *Scraping Data from the BLS*  
 
-First, install the blscrapeR package.  
+---
+
+First install the blscrapeR package, then open data from the BLS and save it to a dataset or datasets in the R workspace.
 
 
 {% highlight r %}
 suppressMessages(install.packages('blscrapeR'))
-{% endhighlight %}  
-
-
----
-
-
-Next, call data from the BLS and store the data to datasets in the R workspace. I decided to start with three seperate datasets, one each for the last three US presidents in office, Clinton, GW Bush, and Obama.  
-
-
-{% highlight r %}
 library(blscrapeR)
 
 bls_2000 <- bls_api(c("LNS13327709", "LNS14000000"),
@@ -120,7 +114,9 @@ bls_2016 <- bls_api(c("LNS13327709", "LNS14000000"),
 ---
 
 
-It's always a good idea to do a spot check or 'sanity check' of the data before moving ahead. The *head()* and *tail()* functions in R are useful for checking the beginning or the end of datasets.  
+It's always a good idea to do a spot check or 'sanity check' of the data before moving ahead.
+
+*Note: I converted the seriesID character data into factor data (2 values), then reversed the factor order so that unemployed and under-employed data would be colored and shown in the order presented above.*
 
 
 {% highlight r %}
@@ -150,110 +146,48 @@ tail(bls_2008, 5)
     192 2006    M01    January   8.4           LNS13327709 2006-01-31
 
 
-{% highlight r %}
-head(bls_2016,5)
-{% endhighlight %}
-
-
-      year period periodName value footnotes    seriesID       date
-    1 2016    M07       July   4.9           LNS14000000 2016-07-31
-    2 2016    M06       June   4.9           LNS14000000 2016-06-30
-    3 2016    M05        May   4.7           LNS14000000 2016-05-31
-    4 2016    M04      April   5.0           LNS14000000 2016-04-30
-    5 2016    M03      March   5.0           LNS14000000 2016-03-31
-
-
-
----
-
-
-The data from BLS contains an empty field or column called 'footnotes'. This is not in error or indicative of a problem with the data. For now I am leaving it as is since I will not be using that field in the time series of followup analyses in my next posts.  
-
-
-#### Step 2 - Setup Plotly
-Load Plotly and then add your account username and key (found on Plotly site in your account details).  
-
-{% highlight r %}
-library(plotly)
-Sys.setenv("plotly_username"="your_plotly_username")
-Sys.setenv("plotly_api_key"="your_api_key")
-py <- plot_ly(username="your_username", key="your_key")  # open plotly connection
-{% endhighlight %}  
-
-
 ---
 
 
 #### Step 3 - Code the Plots
-Code used for the plots. I started in RStudio using ggplot since I am more familiar with it, and then added them to plotly, then pushed the new plotly version to the plotly cloud. I can explain more if needed.  
+Code used for the plots. I started in RStudio using ggplot since I am more familiar with it. The custom theme and the first plot code are below.  
 
 
 #### Clinton years plot
 
 {% highlight r %}
 library(ggplot2)
+library(viridis)
 
-ggplot(data=bls_2000, aes(x = date, y = value, color=seriesID)) +
-  coord_cartesian(ylim=c(3, 16)) +
-  labs(title = "US Unemployment Rates:  1993-2000") +
-  geom_line(size=1) +
-  theme(legend.position="top", legend.title=element_blank(),
-        axis.title.y = element_text(margin = margin(l = 0, r = 10)),
-        axis.title.x = element_text(margin = margin(t = 10))) +
-  scale_color_manual(values=c("#ffae00", "#ff2e00"),
-                     labels=c("U-6 - Underutilized",
-                              "U-3 - Unemployment Rate")) +
+# Basic plot
+g2000 <-
+ggplot(data=bls_2000, aes(x = date, y = value, color=(seriesID))) +
+  coord_cartesian(ylim=c(4, 20)) +
+  geom_line(size=1.5, alpha=0.30) +
+  geom_point(size=0.3, alpha=0.90) +
+  scale_color_viridis(discrete=TRUE,
+                      labels=c("U-3 - Unemployment Rate",
+                               "U-6 - Under Employed")) +
   scale_x_date(date_breaks = ("1 year"), date_labels = "%Y") +
   xlab("Year") +
   ylab("Percent")
 
-  ggplotly(p2000)
+# Custom theme to be added to the base plot
+  theme_basic <-
+    theme_bw() +
+    theme(legend.key = element_rect(fill=NA),
+          legend.position="top", legend.title=element_blank(),
+          axis.title.y = element_text(margin = margin(l = 0, r = 10)),
+          axis.title.x = element_text(margin = margin(t = 10)),
+          legend.background = element_rect(fill = "white"),
+          panel.grid.minor = element_line(colour = "#f3f3f3"),
+          panel.grid.major = element_line(colour = "#DADADA"),
+          text = element_text(family = "sans",
+                              face = "plain", colour = "black", size = 12))
 
-  plotly_POST(p2000, "US Unemployment Rates:  1994-2000")
-{% endhighlight %}
+# Run and save
+g2000 + theme_basic
 
-
----
-
-
-#### Georgie W. Bush years plot
-
-{% highlight r %}
-ggplot(data=bls_2008, aes(x = date, y = value, color=seriesID)) +
-  coord_cartesian(ylim=c(3, 16)) +
-  labs(title = "US Unemployment Rates:  2001-2008") +
-  geom_line(size=1) +
-  theme(legend.position="top", legend.title=element_blank(),
-        axis.title.y = element_text(margin = margin(l = 0, r = 10)),
-        axis.title.x = element_text(margin = margin(t = 10))) +
-  scale_color_manual(values=c("#ffae00", "#ff2e00"),
-                     labels=c("U-6 - Underutilized",
-                              "U-3 - Unemployment Rate")) +
-  scale_x_date(date_breaks = ("1 year"), date_labels = "%Y") +
-  xlab("Year") +
-  ylab("Percent")
-{% endhighlight %}
-
-
----
-
-
-#### Obama years plot
-
-{% highlight r %}
-ggplot(data=bls_2016, aes(x = date, y = value, color=seriesID)) +
-  coord_cartesian(ylim=c(4, 18)) +
-  labs(title = "US Unemployment Rates:  2008-2016") +
-  geom_line(size=1) +
-  theme(legend.position="top", legend.title=element_blank(),
-        axis.title.y = element_text(margin = margin(l = 0, r = 10)),
-        axis.title.x = element_text(margin = margin(t = 10))) +
-  scale_color_manual(values=c("#ffae00", "#ff2e00"),
-                     labels=c("U-6 - Underutilized",
-                              "U-3 - Unemployment Rate")) +
-  scale_x_date(date_breaks = ("1 year"), date_labels = "%Y") +
-  xlab("Year") +
-  ylab("Percent")
 {% endhighlight %}
 
 
