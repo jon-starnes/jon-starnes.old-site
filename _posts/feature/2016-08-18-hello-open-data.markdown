@@ -12,7 +12,7 @@ What is open data? What does that mean? The concept has been around since before
 
 > "Knowledge is open if anyone is free to access, use, modify, and share it — subject, at most, to measures that preserve provenance and openness."  
 
-This site seeks to acknowledge open data ideals in all ways foreseeable. Beyond acknowledging open data sources, this site also actively praises the recent open data initiatives in the US as well as others elsewhere in the world that we hope to discover soon. We also aim to lead by example. That is why all data and sources featured here will be made readily available either on the site or by special request.
+This site seeks to acknowledge open data ideals by featuring blog entries and news that centers on open access data and open source resources. All data and sources featured here will be made readily available either on the site or by special request.
 
 ---
 ---
