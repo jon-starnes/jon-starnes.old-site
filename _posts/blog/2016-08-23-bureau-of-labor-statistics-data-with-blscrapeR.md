@@ -9,7 +9,6 @@ categories: [blog, blscrapeR, Bureau of Labor Statistics, Open Data]
 ---
 
 ---
----
 
 
 The Bureau of Labor Statistics (BLS) has made good on the Open Data Initiative aims of providing open access to government datasets. Fortunately there is an R language api for the BLS data called "blsscrape", which I found first on Jason Rickert's article on [R Packages for Data Access
