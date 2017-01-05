@@ -8,6 +8,9 @@ tags:   [blscrapeR, base R plot, qplot, unemployment rates, underutilized labor,
 categories: [blog, Bureau of Labor Statistics, data munging, Open Data]
 ---
 
+---
+---
+
 
 This foray into the somewhat recent history of unemployment rates (UR) will be a quick read. Before we even start trying to reason with what the data is telling us at first glance. We need to know everything we can about the data. What can the data at hand tell us? Are appearances deceiving (think UR percentages and the time series rises and falls)?  
 
