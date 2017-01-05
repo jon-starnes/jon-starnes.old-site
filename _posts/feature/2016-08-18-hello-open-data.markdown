@@ -7,7 +7,6 @@ categories: [feature, Open Data]
 ---
 
 ---
----
 
 What is open data? What does that mean? The concept has been around since before the days of GPL and open source requirements, but the formal definition is relatively new. Open data is data that can be accessed and used for any reason by anyone, subject only a social contract calling for basic attribution requirements. At the very least this may require a 'share and share alike" agreement. One simply doesn't walk into an open source provider and take at will without a nod back and a payment forward.
 
